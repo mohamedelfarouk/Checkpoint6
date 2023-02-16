@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  /*background-color: #a8d0e6;*/
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 75vh;
+  background-color: #333333;
+}
+
+.prices {
+  position: relative;
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+}
+
+header {
+  min-height: 5vh;
+}
+
+#total {
+  background-color: white;
+}
+
+#total h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  min-height: 50vh;
+}
+
+.items {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 7rem;
+  background-color: white;
+}
+
+.item {
+  text-align: center;
+  width: 20vw;
+  height: 35vh;
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  border-style: ridge;
+  border-color: black;
+}
+
+.imgs img {
+  width: 19.6vw;
+  height: 25vh;
+  border-radius: 10px;
+}
+
+.qntybtns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.qntys {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 50%;
+}
+
+.btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+}
+
+#trashBtn1,
+#trashBtn2,
+#trashBtn3,
+#trashBtn4,
+#trashBtn5,
+#trashBtn6 {
+  margin-bottom: 10px;
+}
+
+.counter1,
+.counter2,
+.counter3,
+.counter4,
+.counter5,
+.counter6 {
+  display: flex;
+  direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.counter1 button,
+.counter2 button,
+.counter3 button,
+.counter4 button,
+.counter5 button,
+.counter6 button {
+  background-color: inherit;
+  color: black;
+  border-radius: 40%;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  min-height: 10vh;
+  background-color: #333333;
+}
+
+footer div {
+  font-size: 14px;
+  color: white;
+  font-weight: 100;
+}
+
+footer .left {
+  padding-left: 10px;
+  text-align: left;
+}
+
+.mid {
+  text-align: center;
+}
+
+.right {
+  padding-right: 10px;
+  text-align: right;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333333;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: #009578;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+#toggle-heart1,
+#toggle-heart2,
+#toggle-heart3,
+#toggle-heart4,
+#toggle-heart5,
+#toggle-heart6 {
+  position: absolute;
+  left: -100vw;
+}
+
+#toggle-heart1,
+#toggle-heart2,
+#toggle-heart3,
+#toggle-heart4,
+#toggle-heart5,
+#toggle-heart6 {
+  color: #aab8c2;
+}
+
+#toggle-heart1:checked + label,
+#toggle-heart2:checked + label,
+#toggle-heart3:checked + label,
+#toggle-heart4:checked + label,
+#toggle-heart5:checked + label,
+#toggle-heart6:checked + label {
+  color: #e2264d;
+}
+
+[for="toggle-heart1"],
+[for="toggle-heart2"],
+[for="toggle-heart3"],
+[for="toggle-heart4"],
+[for="toggle-heart5"],
+[for="toggle-heart6"] {
+  font-size: 2em;
+  cursor: pointer;
+}
+
+[for="toggle-heart1"],
+[for="toggle-heart2"],
+[for="toggle-heart3"],
+[for="toggle-heart4"],
+[for="toggle-heart5"],
+[for="toggle-heart6"] {
+  align-self: center;
+}
+
+@keyframes heart {
+  0%,
+  17.5% {
+    font-size: 0;
+  }
+}
+
+#toggle-heart1:checked + label,
+#toggle-heart2:checked + label,
+#toggle-heart3:checked + label,
+#toggle-heart4:checked + label,
+#toggle-heart5:checked + label,
+#toggle-heart6:checked + label {
+  will-change: font-size;
+  animation: heart 1s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+}

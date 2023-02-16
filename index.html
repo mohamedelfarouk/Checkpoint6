@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>cart</title>
+    <div class="prices">
+      <div id="chipsyPrice">30</div>
+      <div id="wheyPrice">100</div>
+      <div id="pepsiPrice">50</div>
+      <div id="ricePrice">75</div>
+      <div id="teaPrice">75</div>
+      <div id="waterPrice">10</div>
+    </div>
+  </head>
+  <body>
+    <div class="loader"></div>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg bg-dark bg-body-tertiary"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Your cart </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul
+              class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+              style="--bs-scroll-height: 100px"
+            >
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Help</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Account
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">About</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Browsing History</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Orders</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section id="total">
+      <h1>
+        total price:
+        <p id="checkingOut">0</p>
+        $
+      </h1>
+    </section>
+    <main class="items">
+      <div id="item1" class="item">
+        <div class="imgs"><img src="./res/chipsy.jpg" alt="chipsy" /></div>
+
+        <div class="qntys-btns">
+          <div class="qntys">
+            <h6>Chipsy 30$ total:</h6>
+            <h6 id="counting1-1">0</h6>
+            <h6>$</h6>
+          </div>
+          <div class="btns">
+            <button id="trashBtn1" type="button" class="btn btn-danger">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-trash-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"
+                />
+              </svg>
+            </button>
+            <div class="counter1">
+              <button id="inc1">+</button>
+              <h6 id="counting1-2">0</h6>
+              <button id="dec1">-</button>
+            </div>
+            <input id="toggle-heart1" type="checkbox" />
+            <label for="toggle-heart1">❤</label>
+          </div>
+        </div>
+      </div>
+      <div id="item2" class="item">
+        <div class="imgs">
+          <img src="./res/gainspowder.jpg" alt="protein" />
+        </div>
+
+        <div class="qntys-btns">
+          <div class="qntys">
+            <h6>Whey 100$ total:</h6>
+            <h6 id="counting2-1">0</h6>
+            <h6>$</h6>
+          </div>
+          <div class="btns">
+            <button id="trashBtn2" type="button" class="btn btn-danger">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-trash-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"
+                />
+              </svg>
+            </button>
+            <div class="counter2">
+              <button id="inc2">+</button>
+              <h6 id="counting2-2">0</h6>
+              <button id="dec2">-</button>
+            </div>
+            <input id="toggle-heart2" type="checkbox" />
+            <label for="toggle-heart2">❤</label>
+          </div>
+        </div>
+      </div>
+      <div id="item3" class="item">
+        <div class="imgs"><img src="./res/pepsi.jpg" alt="pepsi" /></div>
+        <div class="qntys-btns">
+          <div class="qntys"></div>
+
+          <div class="qntys-btns">
+            <div class="qntys">
+              <h6>Pepsi 50$ total:</h6>
+              <h6 id="counting3-1">0</h6>
+              <h6>$</h6>
+            </div>
+            <div class="btns">
+              <button id="trashBtn3" type="button" class="btn btn-danger">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-trash-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"
+                  />
+                </svg>
+              </button>
+              <div class="counter3">
+                <button id="inc3">+</button>
+                <h6 id="counting3-2">0</h6>
+                <button id="dec3">-</button>
+              </div>
+              <input id="toggle-heart3" type="checkbox" />
+              <label for="toggle-heart3">❤</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="item4" class="item">
+        <div class="imgs"><img src="./res/rice.jpg" alt="rice" /></div>
+
+        <div class="qntys-btns">
+          <div class="qntys">
+            <h6>Rice 75$ total:</h6>
+            <h6 id="counting4-1">0</h6>
+            <h6>$</h6>
+          </div>
+          <div class="btns">
+            <button id="trashBtn4" type="button" class="btn btn-danger">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-trash-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"
+                />
+              </svg>
+            </button>
+            <div class="counter4">
+              <button id="inc4">+</button>
+              <h6 id="counting4-2">0</h6>
+              <button id="dec4">-</button>
+            </div>
+            <input id="toggle-heart4" type="checkbox" />
+            <label for="toggle-heart4">❤</label>
+          </div>
+        </div>
+      </div>
+      <div id="item5" class="item">
+        <div class="imgs"><img src="./res/T.jpg" alt="tea" /></div>
+
+        <div class="qntys-btns">
+          <div class="qntys">
+            <h6>Tea 75$ total:</h6>
+            <h6 id="counting5-1">0</h6>
+            <h6>$</h6>
+          </div>
+          <div class="btns">
+            <button id="trashBtn5" type="button" class="btn btn-danger">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-trash-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"
+                />
+              </svg>
+            </button>
+            <div class="counter5">
+              <button id="inc5">+</button>
+              <h6 id="counting5-2">0</h6>
+              <button id="dec5">-</button>
+            </div>
+            <input id="toggle-heart5" type="checkbox" />
+            <label for="toggle-heart5">❤</label>
+          </div>
+        </div>
+      </div>
+      <div id="item6" class="item">
+        <div class="imgs"><img src="./res/topGwater.jpg" alt="water" /></div>
+
+        <div class="qntys-btns">
+          <div class="qntys">
+            <h6>Water 10$ total:</h6>
+            <h6 id="counting6-1">0</h6>
+            <h6>$</h6>
+          </div>
+          <div class="btns">
+            <button id="trashBtn6" type="button" class="btn btn-danger">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-trash-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"
+                />
+              </svg>
+            </button>
+            <div class="counter6">
+              <button id="inc6">+</button>
+              <h6 id="counting6-2">0</h6>
+              <button id="dec6">-</button>
+            </div>
+            <input id="toggle-heart6" type="checkbox" />
+            <label for="toggle-heart6">❤</label>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="left">Shop with us.</div>
+      <div class="mid">
+        Powered By Mohamed <br />
+        <a href="">privacy policy</a>
+      </div>
+      <div class="right">&#169;2023 all right reserved</div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
