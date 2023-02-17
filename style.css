@@ -36,6 +36,7 @@ header {
 
 main {
   min-height: 50vh;
+  margin-bottom: 5rem;
 }
 
 .items {
@@ -123,6 +124,9 @@ main {
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: end;
